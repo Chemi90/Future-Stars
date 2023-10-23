@@ -1,0 +1,65 @@
+/* Estilo para el contenedor del rectángulo */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Estilo para los botones Retroceder y Avanzar */
+.boton-transparente {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.retroceder {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.avanzar {
+  margin-left: 10px;
+  font-size: 24px;
+}
+
+/* Estilo para el rectángulo */
+.rectangulo {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+.contenido {
+  display: flex;
+}
+
+/* Estilo para la imagen */
+.imagen img {
+  width: 120px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+/* Estilo para el contenido a la derecha de la imagen */
+.info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Estilo para el nombre y el testimonio */
+.nombre,
+.testimonio {
+  margin: 0;
+}
+
+/* El resto de estilos para .tarjetaReview y sus elementos se mantienen como antes */

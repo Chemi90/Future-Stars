@@ -1,0 +1,38 @@
+<div class="bg-header"></div>
+
+<div class="user-info">
+  <img src="assets/oracle.png" alt="" />
+  <div class="datosPersonales">
+    <p class="name">Oracle</p>
+    <p>hello@oracle.com</p>
+  </div>
+</div>
+
+<div class="content">
+  <div>
+    <div class="bolsaTotal">
+      <h3>Valor total del fondo monetario</h3>
+      <p>158.879€</p>
+    </div>
+    <div class="contribucion">
+      <h3>Tu contribución</h3>
+      <p>4.766,37€ (3%)</p>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Valor Total</th>
+          <th>Contribución</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dato of datos">
+          <td>{{ dato.fecha }}</td>
+          <td>{{ dato.valor }}</td>
+          <td>{{ dato.contribucion }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
