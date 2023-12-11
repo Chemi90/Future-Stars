@@ -1,0 +1,113 @@
+.example-form-field {
+  display: block;
+}
+
+form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ol {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+p {
+  font-weight: bold;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+label {
+  display: inline-block;
+  margin-left: 5px;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo para el título */
+.title {
+  font-size: 24px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+/* Estilo para los párrafos */
+.text {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Estilo para el botón "Incrustar" */
+.button-container {
+  text-align: center;
+}
+
+.button-container button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilo para el iframe del video de YouTube */
+.video-container {
+  text-align: center;
+}
+
+iframe {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Estilo para el botón "Enviar respuestas" */
+.submit-button-container {
+  text-align: center;
+}
+
+.submit-button-container button {
+  margin-top: 20px;
+}

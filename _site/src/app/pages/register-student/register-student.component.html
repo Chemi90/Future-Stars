@@ -1,0 +1,222 @@
+<h2>Registro</h2>
+
+<div [@openClose]="!isStep2" style="overflow: hidden">
+  <mat-form-field class="example-form-field">
+    <mat-label>Nombre:</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Apellidos:</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>DNI:</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Email:</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Contraseña:</mat-label>
+    <input matInput type="password" />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Repetir contraseña:</mat-label>
+    <input matInput type="password" />
+  </mat-form-field>
+
+  <div style="text-align: center">
+    <button mat-flat-button color="primary" (click)="isStep2 = true">
+      Siguiente
+    </button>
+  </div>
+</div>
+
+<div [@openClose]="isStep2" style="overflow: hidden">
+  <h2>Cuestionario de Aptitud</h2>
+  <form action="procesar_cuestionario.php" method="POST">
+    <ol>
+      <!-- Pregunta 1 -->
+      <li>
+        <p>¿Cómo te enfrentas a los desafíos en la vida?</p>
+        <input type="radio" name="pregunta1" value="a" /> Con entusiasmo y
+        confianza.<br />
+        <input type="radio" name="pregunta1" value="b" /> Con cautela y
+        precaución.<br />
+        <input type="radio" name="pregunta1" value="c" /> Con resistencia y
+        apatía.<br />
+        <input type="radio" name="pregunta1" value="d" /> Con frustración y
+        enojo.
+      </li>
+
+      <!-- Pregunta 2 -->
+      <li>
+        <p>¿Cómo sueles reaccionar ante el éxito de los demás?</p>
+        <input type="radio" name="pregunta2" value="a" /> Me alegra y felicito
+        sinceramente.<br />
+        <input type="radio" name="pregunta2" value="b" /> No me afecta, es su
+        asunto.<br />
+        <input type="radio" name="pregunta2" value="c" /> Siento envidia y
+        celos.<br />
+        <input type="radio" name="pregunta2" value="d" /> Me incomoda y me hace
+        sentir mal.
+      </li>
+
+      <!-- Pregunta 3 -->
+      <li>
+        <p>¿Qué importancia le das a la autodisciplina en tu vida?</p>
+        <input type="radio" name="pregunta3" value="a" /> La considero esencial
+        para el éxito.<br />
+        <input type="radio" name="pregunta3" value="b" /> Es importante, pero a
+        veces la ignoro.<br />
+        <input type="radio" name="pregunta3" value="c" /> No me importa
+        mucho.<br />
+        <input type="radio" name="pregunta3" value="d" /> La encuentro
+        innecesaria y restrictiva.
+      </li>
+
+      <!-- Pregunta 4 -->
+      <li>
+        <p>¿Cómo te sientes acerca de la resolución de conflictos?</p>
+        <input type="radio" name="pregunta4" value="a" /> Busco soluciones
+        pacíficas y constructivas.<br />
+        <input type="radio" name="pregunta4" value="b" /> Prefiero evitar
+        conflictos en general.<br />
+        <input type="radio" name="pregunta4" value="c" /> Me gusta ganar los
+        conflictos, sin importar cómo.<br />
+        <input type="radio" name="pregunta4" value="d" /> Me disgusta y me enojo
+        en los conflictos.
+      </li>
+
+      <!-- Pregunta 5 -->
+      <li>
+        <p>¿Cuál es tu actitud hacia la crítica constructiva?</p>
+        <input type="radio" name="pregunta5" value="a" /> La valoro y la utilizo
+        para crecer.<br />
+        <input type="radio" name="pregunta5" value="b" /> A veces la acepto, a
+        veces la rechazo.<br />
+        <input type="radio" name="pregunta5" value="c" /> No la tomo en cuenta,
+        no me importa.<br />
+        <input type="radio" name="pregunta5" value="d" /> La tomo como un ataque
+        personal.
+      </li>
+
+      <!-- Pregunta 6 -->
+      <li>
+        <p>
+          ¿Cómo te sientes acerca de aprender nuevas habilidades o
+          conocimientos?
+        </p>
+        <input type="radio" name="pregunta6" value="a" /> Me emociona y me
+        motiva.<br />
+        <input type="radio" name="pregunta6" value="b" /> Lo hago cuando es
+        necesario, pero no me emociona.<br />
+        <input type="radio" name="pregunta6" value="c" /> No me interesa
+        aprender cosas nuevas.<br />
+        <input type="radio" name="pregunta6" value="d" /> Lo veo como una carga
+        y una pérdida de tiempo.
+      </li>
+
+      <!-- Pregunta 7 -->
+      <li>
+        <p>¿Cuál es tu enfoque principal en la vida?</p>
+        <input type="radio" name="pregunta7" value="a" /> Crecimiento personal y
+        desarrollo.<br />
+        <input type="radio" name="pregunta7" value="b" /> Éxito profesional y
+        financiero.<br />
+        <input type="radio" name="pregunta7" value="c" /> Felicidad y bienestar
+        emocional.<br />
+        <input type="radio" name="pregunta7" value="d" /> Contribución a la
+        sociedad y al bienestar de los demás.
+      </li>
+
+      <!-- Pregunta 8 -->
+      <li>
+        <p>¿Cómo te sientes acerca de trabajar en equipo?</p>
+        <input type="radio" name="pregunta8" value="a" /> Disfruto trabajando en
+        equipo y colaborando.<br />
+        <input type="radio" name="pregunta8" value="b" /> Prefiero trabajar de
+        forma independiente.<br />
+        <input type="radio" name="pregunta8" value="c" /> No me importa trabajar
+        en equipo.<br />
+        <input type="radio" name="pregunta8" value="d" /> Me molesta y me siento
+        incómodo trabajando con otros.
+      </li>
+
+      <!-- Pregunta 9 -->
+      <li>
+        <p>¿Cuál es tu nivel de perseverancia ante la adversidad?</p>
+        <input type="radio" name="pregunta9" value="a" /> Soy muy perseverante y
+        no me rindo fácilmente.<br />
+        <input type="radio" name="pregunta9" value="b" /> Persisto, pero puedo
+        rendirme si es muy difícil.<br />
+        <input type="radio" name="pregunta9" value="c" /> Me rindo rápidamente
+        si las cosas se ponen difíciles.<br />
+        <input type="radio" name="pregunta9" value="d" /> Nunca persevero,
+        siempre abandono.
+      </li>
+
+      <!-- Pregunta 10 -->
+      <li>
+        <p>¿Cómo manejas el estrés en tu vida?</p>
+        <input type="radio" name="pregunta10" value="a" /> Lo gestiono de manera
+        efectiva y busco apoyo.<br />
+        <input type="radio" name="pregunta10" value="b" /> Lo sobrellevo, pero a
+        veces me abruma.<br />
+        <input type="radio" name="pregunta10" value="c" /> Me desbordo y me
+        afecta negativamente.<br />
+        <input type="radio" name="pregunta10" value="d" /> Ignoro el estrés y
+        sus efectos.
+      </li>
+
+      <!-- Pregunta Extra -->
+      <li>
+        <p>¿Qué aportarías a una empresa como estudiante?</p>
+        <input type="checkbox" id="opcion1" name="aportes[]" value="Creatividad" />
+        <label for="opcion1">Capacidad de resolución de problemas</label><br />
+
+        <input type="checkbox" id="opcion2" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion2">Adaptabilidad y flexibilidad</label><br />
+
+        <input type="checkbox" id="opcion3" name="aportes[]" value="Innovación" />
+        <label for="opcion3">Habilidad para trabajar bajo presión</label><br />
+
+        <input type="checkbox" id="opcion4" name="aportes[]" value="Dedicación" />
+        <label for="opcion4">Habilidad para capacitar y liderar equipos</label><br />
+
+        <input type="checkbox" id="opcion5" name="aportes[]" value="Comunicación efectiva" />
+        <label for="opcion5">Habilidad para trabajar en entornos multiculturales</label><br />
+      </li>
+    </ol>
+  </form>
+
+  <div class="container">
+    <h2 class="title">Lúcete</h2>
+    <p class="text">
+      Identificar la falta de cultura emprendedora en su comunidad y proponer un
+      plan para inspirar a más personas a iniciar sus propios negocios. El video
+      podría mostrar ejemplos de emprendedores exitosos locales y destacar la
+      importancia del liderazgo y la innovación en el emprendimiento.
+    </p>
+    <p class="text">¿Qué aportarías a una empresa como estudiante?</p>
+
+    <div class="button-container" *ngIf="!iframeUrl">
+      <p class="text">Incrustar video de YouTube</p>
+      <input type="text" [(ngModel)]="url" placeholder="Introduce la URL del video de YouTube" />
+      <button mat-flat-button (click)="incrustarVideo()">Incrustar</button>
+    </div>
+
+    <div class="video-container" *ngIf="iframeUrl">
+      <iframe width="560" height="315" [src]="iframeUrl" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="submit-button-container">
+      <button mat-flat-button color="primary" (click)="send()">Enviar respuestas</button>
+    </div>
+  </div>

@@ -1,0 +1,78 @@
+<div class="bg-header"></div>
+
+<div class="user-info">
+  <img src="assets/person1.png" alt="" />
+  <div class="datosPersonales">
+    <p class="name">Filomena Allellujah</p>
+    <p>filomena@leinn.org</p>
+  </div>
+</div>
+<div class="status">
+  <div>Estado de la adjudicación</div>
+  <div class="pending">Pendiente...</div>
+  <p>La adjudicación se realizará dentro de <b>8 días</b>.</p>
+</div>
+<div class="constelacion">
+  <img src="assets/constelacion.jpeg" alt="" />
+</div>
+
+<h2>Skills identificadas</h2>
+<div class="chart-container">
+  <img src="assets/hexa.png" alt="" />
+</div>
+
+<div class="aplicacionesANteriores">
+  <h2>Aplicaciones anteriores</h2>
+  <!-- Tu archivo HTML en el componente -->
+  <table>
+    <thead>
+      <tr>
+        <th>Fecha</th>
+        <th>ID de Aplicación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dato of datos">
+        <td>{{ dato.fecha }}</td>
+        <td>{{ dato.idAplicacion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="proyectos">
+  <h2>Agregar Proyecto</h2>
+  <form (submit)="agregarProyecto()" class="formulario">
+    <div class="campo">
+      <label for="nombre">Nombre del Proyecto:</label>
+      <input type="text" id="nombre" name="nombre" [(ngModel)]="nombreProyecto" required />
+    </div>
+    <div class="campo">
+      <label for="descripcion">Descripción:</label>
+      <div class="textarea-container">
+        <textarea id="descripcion" name="descripcion" [(ngModel)]="descripcionProyecto" required></textarea>
+      </div>
+    </div>
+    <div class="boton-container">
+      <button type="submit">Añadir Proyecto</button>
+    </div>
+  </form>
+
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let proyecto of proyectos">
+        <td>{{ proyecto.nombre }}</td>
+        <td>{{ proyecto.descripcion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div class="skills"></div>

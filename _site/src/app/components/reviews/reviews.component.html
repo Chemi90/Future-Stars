@@ -1,0 +1,24 @@
+<div class="container">
+  <button class="boton-transparente retroceder" (click)="retroceder()">&#11144;</button>
+  <div class="rectangulo">
+    <div class="carousel-container">
+      <div class="tarjetaReview">
+        <div class="contenido">
+          <div class="imagen">
+            <img [src]="tarjetas[currentIndex].imagenUrl" alt="{{ tarjetas[currentIndex].nombre }}" />
+          </div>
+          <div class="info">
+            <div class="nombre">
+              <p>{{ tarjetas[currentIndex].nombre }}</p>
+              <p>{{ tarjetas[currentIndex].cargo }}</p>
+            </div>
+            <div class="testimonio">
+              <p>{{ tarjetas[currentIndex].testimonio }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="boton-transparente avanzar" (click)="avanzar()">&#11146;</button>
+</div>

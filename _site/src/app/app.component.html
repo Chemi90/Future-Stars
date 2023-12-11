@@ -1,0 +1,52 @@
+<mat-sidenav-container>
+  <mat-sidenav #drawer [mode]="'over'" [opened]="isOpened" (close)="isOpened = false">
+    <div>
+      <div class="sidenav-header"></div>
+
+      <div class="sidenav-content">
+        <h2>¡Bienvenido!</h2>
+
+        <div *ngIf="!isLogged">
+          <div>¿Tienes cuenta?</div>
+          <div class="option"><button mat-flat-button (click)="login()">🚪 Acceder</button></div>
+
+          <div style="margin-top: 15px;">¿Quieres participar?</div>
+          <div class="option"><button mat-flat-button (click)="regsiterStudent()">👩‍🎓 Registro estudiante</button>
+          </div>
+          <div class="option"><button mat-flat-button (click)="registerBuisness()">💼 Registro inversor</button></div>
+        </div>
+
+        <div *ngIf="isLogged">
+          <div class="option"><button mat-flat-button (click)="logout()">🚪 Cerrar sesión</button></div>
+        </div>
+
+        <div style="margin-top: 62px"></div>
+      </div>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <div class="root">
+      <mat-toolbar>
+        <!--   <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+           <mat-icon (click)="isOpened = !isOpened">menu</mat-icon>
+        </button>-->
+        <span style="display: flex; align-items: center; gap: 15px;"><img src="assets/favicon.png"
+            style="width: 40px;" /> Future
+          stars</span>
+        <span style="flex: 1"></span>
+        <div class="right">
+          <button mat-button style="font-size: 1em" (click)="isOpened = !isOpened">
+            {{buttonText}}
+          </button>
+        </div>
+      </mat-toolbar>
+
+      <div class="body">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+    <footer></footer>
+  </mat-sidenav-content>
+</mat-sidenav-container>

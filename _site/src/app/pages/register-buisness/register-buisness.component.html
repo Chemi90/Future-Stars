@@ -1,0 +1,143 @@
+<h2>Registro de Empresario</h2>
+
+<div [@openClose]="!isStep2" style="overflow: hidden">
+  <mat-form-field class="example-form-field">
+    <mat-label>Nombre:</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Nombre de la Empresa:</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Correo Electrónico:</mat-label>
+    <input matInput />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Contraseña:</mat-label>
+    <input matInput type="password" />
+  </mat-form-field>
+
+  <mat-form-field class="example-form-field">
+    <mat-label>Repetir contraseña:</mat-label>
+    <input matInput type="password" />
+  </mat-form-field>
+
+  <div style="text-align: center">
+    <button mat-flat-button color="primary" (click)="isStep2 = true">
+      Siguiente
+    </button>
+  </div>
+</div>
+
+<div [@openClose]="isStep2" style="overflow: hidden">
+  <h2>Políticas y Valores Empresariales</h2>
+  <form action="cuestionario" method="POST">
+
+    <ol>
+      <!-- Pregunta 1 -->
+      <li>
+        <p>¿La empresa tiene una declaración formal de su misión, visión y
+          valores?</p>
+        <input type="radio" name="pregunta-1" value="a" /> Sí<br />
+        <input type="radio" name="pregunta-1" value="b" /> No<br />
+        <input type="radio" name="pregunta-1" value="c" /> No estoy seguro<br />
+      </li>
+
+      <!-- Pregunta 2 -->
+      <li>
+        <p>¿Cómo se asegura de que los empleados conozcan y sigan estas políticas y valores? </p>
+        <textarea name="respuesta-2" rows="4"></textarea>
+      </li>
+
+      <!-- Pregunta 3 -->
+      <li>
+        <p>¿La empresa tiene un código de ética o conducta?</p>
+        <input type="radio" name="pregunta-3" value="'Sí'" /> Sí<br />
+        <input type="radio" name="pregunta-3" value="'No'" /> No<br />
+        <input type="radio" name="pregunta-3" value="'No estoy seguro'" /> No estoy seguro<br />
+      </li>
+
+      <!-- Pregunta 4 -->
+      <li>
+        <p>¿Cómo maneja la empresa denuncias de conducta inapropiada o ética?</p>
+        <textarea name="respuesta-4" rows="4"></textarea>
+      </li>
+
+      <!-- Pregunta 5 -->
+      <li>
+        <p>¿Existen políticas de igualdad de oportunidades y no discriminación?</p>
+        <input type="radio" name="pregunta-5" value="'Sí'" /> Sí<br />
+        <input type="radio" name="pregunta-5" value="'No'" /> No<br />
+        <input type="radio" name="pregunta-5" value="'No estoy seguro'" /> No estoy seguro<br />
+      </li>
+
+      <!-- Pregunta 6 -->
+      <li>
+        <p>¿Cómo se asegura de que sus acciones y decisiones sean transparentes y sujetas a revisión?</p>
+        <textarea name="respuesta-6" rows="4"></textarea>
+      </li>
+
+      <!-- Pregunta 7 -->
+      <li>
+        <p>¿Cómo se asegura de que sus inversiones no contribuyan a prácticas no éticas?</p>
+        <textarea name="respuesta-7" rows="4"></textarea>
+      </li>
+
+      <!-- Pregunta 8 -->
+      <li>
+        <p>¿Qué estrategias tiene para mejorar constantemente su desempeño en este ámbito?</p>
+        <textarea name="respuesta-8" rows="4"></textarea>
+      </li>
+
+      <!-- Pregunta 9 -->
+      <li>
+        <p>¿Cómo involucra la empresa a sus empleados, clientes, proveedores y la comunidad en sus iniciativas de
+          responsabilidad social?</p>
+        <textarea name="respuesta-9" rows="4"></textarea>
+      </li>
+
+      <!-- Pregunta 10 -->
+      <li>
+        <p>¿Que razón te lleva a esta inversión economica en los futuros lideres del sector?</p>
+        <input type="checkbox" id="opcion1" name="aportes[]" value="Creatividad" />
+        <label for="opcion1">Fuerza Laboral Calificada: Una educación de calidad es esencial para
+          desarrollar una fuerza laboral calificada.</label><br />
+
+        <input type="checkbox" id="opcion2" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion2">Innovación y Creatividad: La educación fomenta la innovación y la
+          creatividad. </label><br />
+
+        <input type="checkbox" id="opcion3" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion3">Mejora de la Comunidad: La inversión en la educación beneficia a la
+          comunidad en general.</label><br />
+
+        <input type="checkbox" id="opcion4" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion4">Desarrollo Sostenible: La educación es un factor clave en el
+          desarrollo sostenible.</label><br />
+
+        <input type="checkbox" id="opcion5" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion5">Responsabilidad Social Empresarial (RSE): La inversión en educación
+          es una parte importante de la RSE.</label><br />
+
+        <input type="checkbox" id="opcion6" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion6">Reclutamiento y Retención de Talentos: La educación de calidad atrae
+          a talentos jóvenes y motivados.</label><br />
+
+        <input type="checkbox" id="opcion7" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion7">Estabilidad Política y Social: Una sociedad bien educada tiende a ser
+          más estable en términos políticos y sociales.</label><br />
+
+        <input type="checkbox" id="opcion8" name="aportes[]" value="Trabajo en equipo" />
+        <label for="opcion8">Sucesión Empresarial: Preparar futuros líderes es fundamental para la
+          sucesión empresarial.</label><br />
+      </li>
+    </ol>
+  </form>
+  <div class="submit-button-container">
+    <button mat-flat-button color="primary" (click)="send()">Enviar respuestas</button>
+  </div>
+</div>

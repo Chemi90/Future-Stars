@@ -1,0 +1,129 @@
+ul,
+li {
+  list-style: none;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  font-size: 1.8em;
+  line-height: 1.5em;
+}
+
+.wrapper {
+  border-radius: 15px;
+}
+
+h1 {
+  font-size: 1.1rem;
+  font-family: sans-serif;
+}
+
+.sessions {
+  border-radius: 12px;
+  position: relative;
+}
+
+li.done {
+  padding-bottom: 3rem;
+  border-left: 1px solid #abaaed;
+  position: relative;
+  padding-left: 20px;
+  margin-left: 10px;
+  display: flex;
+  gap: 20px;
+
+  &:last-child {
+    border: 0px;
+    padding-bottom: 0;
+  }
+
+  &:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: white;
+    box-shadow: 2px 2px 0px #bab5f8;
+    box-shadow: 2px 2px 0px #bab5f8;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 0px;
+  }
+}
+
+.time {
+  color: #2a2839;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+p {
+  color: #4f4f4f;
+  font-family: sans-serif;
+  line-height: 1.5;
+  margin-top: 0.4rem;
+}
+
+li.done:before {
+  background-color: rgb(0, 182, 0);
+}
+
+li.up {
+  padding-bottom: 3rem;
+  position: relative;
+  padding-left: 30px;
+  margin-left: 10px;
+  border-left: 1px solid #abaaed;
+  display: flex;
+  gap: 50px;
+
+  &:before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: white;
+    box-shadow: 2px 2px 0px #bab5f8;
+    box-shadow: 2px 2px 0px #bab5f8;
+    position: absolute;
+    left: -12px;
+    top: 0px;
+    border-radius: 3250px 0 0 0;
+  }
+}
+
+li.up:before {
+  content: "";
+  border: 4px solid green;
+  border-width: 0 5px 5px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(-135deg);
+  animation: MoveUpDown 1s ease infinite;
+}
+
+@keyframes MoveUpDown {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-135deg);
+  }
+  50% {
+    transform: translateY(5px) rotate(-135deg);
+  }
+}
+
+li.done.gray:before {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.description {
+  background-color: #ededed;
+  border-radius: 0 8px 8px 8px;
+  padding: 12px 20px;
+
+  &.latest {
+    font-size: 1.4em;
+    line-height: 1.2em;
+  }
+}

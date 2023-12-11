@@ -1,0 +1,24 @@
+<div style="text-align: center;">
+    <h1>Iniciar sesión</h1>
+    <div *ngIf="!isLoading">
+        <div>
+            <mat-form-field class="example-form-field">
+                <mat-label>Email:</mat-label>
+                <input matInput name="email" [(ngModel)]="email" />
+            </mat-form-field>
+        </div>
+
+        <div>
+            <mat-form-field class="example-form-field">
+                <mat-label>Contraseña:</mat-label>
+                <input matInput type="password" name="pass" [(ngModel)]="pass" />
+            </mat-form-field>
+        </div>
+
+        <div style="color:red; margin-bottom: 10px;" *ngIf="error">Credenciales incorrecto</div>
+
+        <button mat-flat-button color="primary" (click)="login()">Iniciar sesión</button>
+    </div>
+
+    <mat-spinner *ngIf="isLoading" style="margin: auto;"></mat-spinner>
+</div>

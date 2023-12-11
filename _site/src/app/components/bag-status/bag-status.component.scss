@@ -1,0 +1,60 @@
+.root {
+  text-align: center;
+}
+
+.big {
+  font-size: 5.5em;
+  margin-bottom: 0.3em;
+}
+
+.bolsaDinero {
+  padding: 30px 10px;
+  padding-top: 50px;
+  margin: 20px -20px;
+
+  background-color: #1f1f1f;
+  background: linear-gradient(
+    112.1deg,
+    rgb(32, 38, 57) 11.4%,
+    rgb(63, 76, 119) 70.2%
+  );
+  background-size: 200% 200%;
+
+  color: white;
+  animation: bganim 7s ease infinite;
+}
+
+.diasReparto {
+  margin: 30px 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 8px;
+}
+
+.grid div {
+  border-radius: 8px;
+  background-color: rgb(221, 221, 221);
+  padding-top: 26px;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: 2.5em;
+}
+
+@keyframes bganim {
+  from {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  to {
+    background-position: 0% 50%;
+  }
+}
